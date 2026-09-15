@@ -33,7 +33,8 @@ p, li { max-width: 72ch; }
 .support-header { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; padding: clamp(2rem, 6vw, 5rem); color: var(--white); background: var(--green-dark); }
 .support-header p { margin: 1rem 0 0; color: var(--green-soft); font-size: 1.15rem; }
 .support-header img { width: 10rem; }
-.support-actions { display: grid; gap: 0.75rem; justify-items: start; }
+.support-actions { display: grid; gap: 0.75rem; justify-items: stretch; }
+.support-actions img { justify-self: end; }
 .support-content { padding: clamp(2rem, 6vw, 5rem); }
 .class-label { margin: 0 0 1rem; font-family: var(--font-display); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 .print-control, .download-control, .notes-controls a { display: inline-flex; padding: 0.7rem 1rem; color: var(--white); border: 1px solid currentColor; background: transparent; font-weight: 700; text-decoration: none; cursor: pointer; }
@@ -82,14 +83,27 @@ p, li { max-width: 72ch; }
 }
 
 @media print {
-  @page { size: A4; margin: 1.4cm; }
+  @page { size: A4; margin: 2cm 1.8cm; }
   html, body { background: white; }
+  body { font-size: 10.5pt; }
+  p, li { max-width: none; }
   .support-shell { width: auto; margin: 0; box-shadow: none; }
-  .support-header { padding: 1.5rem; print-color-adjust: exact; }
-  .support-header h1 { font-size: 3.5rem; }
-  .support-content { padding: 0; }
+  .support-header { padding: 2rem 2.2rem; break-inside: avoid; print-color-adjust: exact; }
+  .support-header h1 { font-size: 3rem; }
+  .support-content { padding: 1.6rem 0 0; }
   .print-control, .download-control { display: none; }
+  .section-break { break-before: page; }
+  h2 { margin: 2.4rem 0 1rem; font-size: 2rem; break-after: avoid; }
+  h3 { break-after: avoid; }
+  .safety-box { break-inside: avoid; }
+  .process-strip { break-inside: avoid; }
+  .process-strip li { flex: 1 1 auto; padding: 0.6rem 0.8rem; font-size: 1.05rem; }
   .prompt-sheet, .safety-box { print-color-adjust: exact; }
-  .resource-list a::after { content: "\A" attr(href); display: block; color: var(--muted); font-size: 0.75rem; font-weight: 400; white-space: pre-wrap; }
-  h2, h3 { break-after: avoid; }
+  .prompt-sheet { break-inside: avoid; }
+  .resource-group { margin: 0.5rem 0 0; }
+  .resource-list li { break-inside: avoid; gap: 1rem; padding: 0.4rem 0; }
+  .resource-list strong { font-size: 1.15rem; }
+  .resource-list p { margin-top: 0.15rem; }
+  .resource-list a::after { content: "\A" attr(href); display: block; margin-top: 0.1rem; color: var(--muted); font-size: 0.72rem; font-weight: 400; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .source-note { break-inside: avoid; }
 }
