@@ -33,10 +33,11 @@ p, li { max-width: 72ch; }
 .support-header { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; padding: clamp(2rem, 6vw, 5rem); color: var(--white); background: var(--green-dark); }
 .support-header p { margin: 1rem 0 0; color: var(--green-soft); font-size: 1.15rem; }
 .support-header img { width: 10rem; }
+.support-actions { display: grid; gap: 0.75rem; justify-items: start; }
 .support-content { padding: clamp(2rem, 6vw, 5rem); }
 .class-label { margin: 0 0 1rem; font-family: var(--font-display); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-.print-control, .notes-controls a { display: inline-flex; padding: 0.7rem 1rem; color: var(--white); border: 1px solid currentColor; background: transparent; font-weight: 700; text-decoration: none; cursor: pointer; }
-.print-control:hover, .notes-controls a:hover { color: var(--green-dark); background: var(--white); }
+.print-control, .download-control, .notes-controls a { display: inline-flex; padding: 0.7rem 1rem; color: var(--white); border: 1px solid currentColor; background: transparent; font-weight: 700; text-decoration: none; cursor: pointer; }
+.print-control:hover, .download-control:hover, .notes-controls a:hover { color: var(--green-dark); background: var(--white); }
 
 .safety-box { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--red); background: #f6e8e3; }
 .safety-box strong:first-child { color: var(--red); font-family: var(--font-display); font-size: 2rem; }
@@ -87,7 +88,7 @@ p, li { max-width: 72ch; }
   .support-header { padding: 1.5rem; print-color-adjust: exact; }
   .support-header h1 { font-size: 3.5rem; }
   .support-content { padding: 0; }
-  .print-control { display: none; }
+  .print-control, .download-control { display: none; }
   .prompt-sheet, .safety-box { print-color-adjust: exact; }
   .resource-list a::after { content: "\A" attr(href); display: block; color: var(--muted); font-size: 0.75rem; font-weight: 400; white-space: pre-wrap; }
   h2, h3 { break-after: avoid; }

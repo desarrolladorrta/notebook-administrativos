@@ -25,7 +25,8 @@ Los controles también están disponibles en pantalla. La URL conserva el númer
 ## Materiales
 
 - `index.html`: presentación principal.
-- `guia.html`: guía imprimible con cinco prompts y recursos oficiales.
+- `guia.html`: guía web imprimible con cinco prompts y recursos oficiales.
+- `docs/guia-practica-gemini-notebook-administrativos-cecar.pdf`: versión descargable de la guía.
 - `notes.html`: notas locales del facilitador sincronizadas por diapositiva.
 - `docs/`: documentos institucionales usados en las demostraciones.
 
@@ -33,7 +34,7 @@ Los controles también están disponibles en pantalla. La URL conserva el númer
 
 Las notas están diseñadas para una segunda ventana y no para la pantalla compartida. No contienen credenciales ni datos personales, pero sí material de facilitación que no debe publicarse.
 
-El flujo de GitHub Pages crea una lista explícita de archivos públicos y excluye `notes.html`, `PRODUCT.md` y `DESIGN.md`. Publica únicamente los tres PDF públicos utilizados en las demostraciones. En el sitio publicado, el control de notas se oculta. `notes.html` permanece únicamente en la copia local y está excluido del repositorio mediante `.gitignore`.
+El flujo de GitHub Pages crea una lista explícita de archivos públicos y excluye `notes.html`, `PRODUCT.md` y `DESIGN.md`. Publica la guía PDF y los tres documentos públicos utilizados en las demostraciones. En el sitio publicado, el control de notas se oculta. `notes.html` permanece únicamente en la copia local y está excluido del repositorio mediante `.gitignore`.
 
 ## Publicar en GitHub Pages
 

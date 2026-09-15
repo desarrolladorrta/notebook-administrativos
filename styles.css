@@ -372,7 +372,7 @@ blockquote { max-width: 48rem; margin: clamp(2rem, 6vh, 5rem) 0 0 auto; padding:
 .slide-close .brand-logo { padding: 0; background: transparent; }
 .slide-close h2 { max-width: 18ch; margin-bottom: 1.5rem; }
 .slide-close p { max-width: 46ch; color: var(--green-soft); font-size: 1.25rem; }
-.closing-actions { grid-column: 2; display: flex; gap: 2rem; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3); }
+.closing-actions { grid-column: 2; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3); }
 .closing-actions a { padding: 0.75rem 1rem; color: var(--green-dark); background: var(--white); font-weight: 700; text-decoration: none; }
 
 .presenter-bar {
